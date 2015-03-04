@@ -31,6 +31,56 @@ div[data-role="content"] {
 	height:100%;
 	overflow: hidden;
 }
+
+
+/* attentation */
+.tips {
+	width: 86%; 
+	position: absolute; 
+	z-index: 2;
+	top:10%;
+	left:7%;
+	margin:10em auto;
+
+
+}
+.close{
+	position: absolute;
+	z-index: 3;
+	top:0;
+	right:0;
+	margin: 6px 6px 0 0;
+}
+.tips_con{
+    width: 80%;
+	position: absolute;
+	z-index: 3;
+	top:30%;
+	left:0;
+	margin-left: 10%;
+	
+
+}
+
+.jiantou{
+    
+	position: absolute;;
+	z-index: 3;
+	top: 2em;
+	right: 1em;
+}
+.jiantou img {
+	width:60%;
+}
+.fight_btn {
+	width: 36%; 
+    display:inline-block;
+	position: absolute; 
+	z-index: 2;
+	left: 32%;
+	top: 70%;
+
+}
 .border {
 	width: 100%;
 	height: 100%;
@@ -61,9 +111,10 @@ div[data-role="content"] {
 }
 .shake {
 	width: 16%; 
-	margin: 4em auto;
 	position: relative; 
 	z-index: 2;
+	margin: 3em auto 0 auto;
+	bottom: 2%;
 
 }
 /* congratulation */
@@ -88,5 +139,56 @@ div[data-role="content"] {
 	color: #7a7a7a;
 	line-height: 150%;
 
+
+}
+.form {
+	width: 90%;
+	height: 100%;	
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 0;
+	
+	
+}
+.form ul {
+	width: 100%;
+	float: left;
+	margin-left: 4%;
+
+	
+}
+.form li {
+	width: 100%;
+	float: left;
+	height: 36px;
+	margin: 2px 0;
+	display: inline-block;
+	position: relative;
+}
+.formtext{
+	font-size: 2.4em;
+	color: #7a7a7a;
+}
+.form span img{
+	width: 5%;
+	margin-right: 10px;
+	
+}
+.form input{
+	
+	width:50%;
+	background: none;
+	border-bottom: 1px solid #7a7a7a;
+
+
+}
+.confirm_btn{
+    width: 36%; 
+    display:inline-block;
+	position: absolute; 
+	z-index: 2;
+	left: 37%;
+	top: 26%;
 
 }
