@@ -1,0 +1,59 @@
+请求接口地址
+./Request.php
+
+
+【判断登录/获取登录用户信息】
+?model=islogin
+【返回】
+code msg
+0    未登录
+1    用户信息｛
+				id:用户ID
+				openid:微信ID
+				name:微博昵称
+				mobile:用户所在地
+				address:头像
+				drawstatus:是否抽过 (0为可以抽 1为不可抽)
+				lotterystatus:是否中奖 (0为未中奖 1为中奖)
+				｝
+例如：
+{"code":1,"msg":{"id":"1","openid":"123123123","name":"aaa","mobile":"bbb","address":"ccc","drawstatus":"1","lotterystatus":"1","createtime":"2015-03-04 06:41:59"}}
+
+
+
+【抽奖】  
+?model=lotterydraw
+【返回】
+code  msg
+0  未登录
+1  恭喜中奖
+2  未中奖
+3  对不起，您已经没有抽奖机会了
+
+
+【分享】
+?model=share
+【参数】
+source  来源(朋友圈/好友)
+【返回】
+code  msg
+0     未登录
+1     分享成功
+
+
+【留资料】
+?model=finish
+【参数】
+name  姓名
+mobile  手机号
+address 地址
+【返回】
+code  msg
+0     未登录
+1     提交成功
+2     请填写必填项
+
+
+
+
+
