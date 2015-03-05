@@ -129,7 +129,7 @@ if(isset($_POST['model'])){
 			exit;
 			break;
 		case 'test':
-			$_SESSION["openid"]=123123123;
+			//$_SESSION["openid"]=123123123;
 			var_dump($_SESSION);
 			break;	
 		default:
