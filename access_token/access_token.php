@@ -7,7 +7,7 @@ print_r($token);
 */
 $url=isset($_REQUEST['url'])?$_REQUEST['url']:"http://lancasterld.samesamechina.com";
 $time=file_get_contents("time.txt");
-$access_token=file_get_contents("access_token.txt");
+$sign=file_get_contents("access_token.txt");
 if(time()-$time>=10){
 	//token过期重新获取
 	$appid="wx77e36122ac152d47";
