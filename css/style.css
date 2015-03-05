@@ -1,0 +1,244 @@
+html,body{
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow: hidden;
+	font-size: 65%;
+	font-family: "微软雅黑";
+}
+
+*{
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+div[data-role="page"] {
+	width: 100%; 
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	background: url("../images/background.jpg") center top no-repeat;
+	background-size: 100%;
+}
+
+div[data-role="content"] { 
+	text-align: center;
+	position: absolute;
+	left: 0; 
+	top:0;
+	width: 100%;
+	height:100%;
+	overflow: hidden;
+}
+
+.mask{
+	width:100%;
+	height: 100%;
+	background-color:#dcdcdc;
+	opacity: 0.5; 
+	position: absolute;
+	z-index: 1;
+	top:0 ;
+	left:0 ;
+}
+/* attentation */
+
+
+
+.tips {
+	width: 90%;
+	position: absolute;
+	z-index: 10;
+	top: 10%;
+	left: 5%;
+	margin: 10em auto;
+
+
+}
+.close{
+
+	position: absolute;
+	z-index: 3;
+	top:0;
+	right:0;
+	margin: 6px 3px 0 0;
+}
+.close img {
+	width:70%;
+}
+.tips_con{
+    width: 72%;
+	position: absolute;
+	z-index: 3;
+	top:20%;
+	left:0;
+	margin-left: 14%;
+	
+
+}
+
+
+.jiantou{
+    
+	position: absolute;;
+	z-index: 3;
+	top: 2em;
+	right: 1em;
+}
+.jiantou img {
+	width:60%;
+}
+.fight_btn {
+	width:40%; 
+    display:inline-block;
+	position: absolute; 
+	z-index: 2;
+	left: 30%;
+	top: 82%;
+
+}
+.border {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.logo {
+	width: 56%; 
+	display:inline-block;
+	margin: 8em 0;
+	position: relative; 
+	z-index: 2;
+}
+.present {
+	width: 36%; 
+	margin: -1.2em auto;
+	position: relative; 
+	z-index: 2;
+
+}
+.yaoyao {
+	width: 74%; 
+	margin: 6em auto;
+	position: relative; 
+	z-index: 2;
+
+}
+.shake {
+	width: 16%; 
+	position: relative; 
+	z-index: 2;
+	margin: 3em auto 0 auto;
+	bottom: 2%;
+
+}
+/* congratulation */
+
+.con_text {
+	width: 100%;
+	margin: 1em auto;
+	position: relative; 
+	z-index: 2;
+	
+
+}
+.con_text h1 {
+	font-size: 5em;
+	color: #ff677c;
+	margin-bottom:1.2em;
+
+}
+.con_text p {
+	width: 98%;
+	display: inline-block;
+	font-size: 1.8em;
+	color: #7a7a7a;
+	line-height: 150%;
+	
+
+
+}
+.form {
+	width: 90%;
+	height: 100%;	
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 0;
+	
+	
+}
+.form ul {
+	width: 100%;
+	float: left;
+	margin-left: 4%;
+
+	
+}
+.form li {
+	width: 100%;
+	float: left;
+	height: 36px;
+	margin: 2px 0;
+	display: inline-block;
+	position: relative;
+}
+.formtext{
+	font-size: 2.5em;
+	color: #7a7a7a;
+}
+.form span img{
+	width: 5%;
+	margin-right: 10px;
+	
+}
+.form input{
+	color: #7a7a7a;
+	width:50%;
+	background: none;
+	border-bottom: 1px solid #7a7a7a;
+
+
+}
+.confirm_btn{
+    width: 36%; 
+    display:inline-block;
+	position: absolute; 
+	z-index: 2;
+	left: 37%;
+	top: 26%;
+
+}
+
+
+/* regret */
+.regret_con {
+	width: 62%;
+	position: absolute;
+	z-index: 3;
+	top:25%;
+	left:0;
+	margin-left: 18%;
+}
+
+/* success */
+.success_con {
+	width: 60%;
+	position: absolute;
+	z-index: 3;
+	top:28%;
+	left:0;
+	margin-left: 20%;
+
+}
+.more_btn {
+	width:50%; 
+    display:inline-block;
+	position: absolute; 
+	z-index: 2;
+	left: 24.5%;
+	top: 82%;
+
+}
