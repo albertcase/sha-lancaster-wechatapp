@@ -117,6 +117,17 @@ if(isset($_POST['model'])){
 			}
 			exit;
 			break;
+		case 'gotourl':
+			$openid=isset($_POST['openid'])?$_POST['openid']:"";
+			$url=isset($_POST['url'])?$_POST['url']:"";
+			if($openid==""||$url==""){
+				print "error";
+				exit;
+			}
+			$_SESSION["openid"]=$openid;
+			header("Location: ".$url);
+			exit;
+			break;
 		case 'test':
 			$_SESSION["openid"]=123123123;
 			var_dump($_SESSION);
