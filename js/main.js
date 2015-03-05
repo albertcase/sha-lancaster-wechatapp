@@ -151,7 +151,7 @@ function wechatShare(timestamp_val,signature_val){
   
   var SHARE_TITLE = 'lancaster摇一摇';
   var SHARE_LINK = 'http://lancasterld.samesamechina.com';
-  var SHARE_IMG = 'http://lancasterld.samesamechina.com/images/logo.jpg';
+  var SHARE_IMG = 'http://lancasterld.samesamechina.com/images/logo.png';
   var SHARE_DESC = 'lancaster摇一摇新产品';
   wx.config({
       debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
