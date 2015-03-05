@@ -29,7 +29,13 @@
                 last_x = x;  
                 last_y = y;  
                 last_z = z;  
-            }  
-        }   
+            }
+
+        }
+
+
+        $(document).on("pageinit","#index",function(){  
+  			init()
+		});   
     })
 })(jQuery)
