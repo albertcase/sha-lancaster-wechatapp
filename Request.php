@@ -125,19 +125,19 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			$_SESSION["openid"]=$openid;
-			header("Location: ".$url);
+			Header("Location: ".$url);
 			exit;
 			break;
 		case 'test':
 			//$_SESSION["openid"]=123123123;
 			var_dump($_SESSION);
-			break;	
+			break;
+		default:
 			# code...
 			print json_encode(array("code"=>9999,"msg"=>"No Model"));
 			exit;
 			break;
 	}
-}
-		default:
+}		
 print "error";
 exit;
