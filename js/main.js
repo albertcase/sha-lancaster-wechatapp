@@ -6,7 +6,7 @@
         var x = y = z = last_x = last_y = last_z = 0;  
         function init() {  
             if (window.DeviceMotionEvent) {  
-                window.addEventListener('devicemotion', deviceMotionHandler, false);  
+                window.addEventListener('devicemotion', deviceMotionHandler, false); 
             } else {  
                 alert('not support mobile event');  
             }  
@@ -24,7 +24,24 @@
   
                 if (speed > SHAKE_THRESHOLD) {  
                 	
-                    alert("摇动了");  
+                    //alert("摇动了");  
+                    $.ajax({
+                        url:"/Request.php?model=lotterydraw",
+                        type:"post",
+                        dataType:"json",
+                        success:function(data){
+                            if(data.code=="1"){
+                                window.location="#congratulation";
+                            }else if(data.code==2){
+                                $(".regret_tips").show();
+                            }else{
+                                alert("没有抽奖机会了，请分享后获取更多机会")
+                            }
+
+                        }
+
+
+                    })
                 }  
                 last_x = x;  
                 last_y = y;  
