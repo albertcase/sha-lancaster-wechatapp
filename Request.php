@@ -119,7 +119,7 @@ if(isset($_POST['model'])){
 			break;
 		case 'gotourl':
 			$openid=isset($_POST['openid'])?$_POST['openid']:"";
-			$url=isset($_POST['url'])?$_POST['url']:"";
+			$url=isset($_POST['url'])?urldecode($_POST['url']):"";
 			if($openid==""||$url==""){
 				print "error";
 				exit;
