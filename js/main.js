@@ -205,8 +205,19 @@ function wechatShare(timestamp_val,signature_val){
         link: SHARE_LINK, // 分享链接
         imgUrl: SHARE_IMG, // 分享图标
         success: function () {
-            // 用户确认分享后执行的回调函数
-            //alert('分享成功')
+            $.ajax({  
+		        type: "GET",  
+		        url: "/Request.php?model=share", //orderModifyStatus 
+		        data:{source:"timeline"},
+		        dataType:"json",  
+		        async:false,  
+		        cache:false,  
+		        success: function(data){  
+		        },  
+		        error: function(json){  
+		            //alert("数据获取异常，请刷新后重试...");  
+		        }  
+		 	});  
         },
         cancel: function () { 
             // 用户取消分享后执行的回调函数
@@ -221,8 +232,19 @@ function wechatShare(timestamp_val,signature_val){
         imgUrl: SHARE_IMG, // 分享图标
       desc: SHARE_DESC,
         success: function () { 
-            // 用户确认分享后执行的回调函数
-            //alert('分享成功')
+            $.ajax({  
+		        type: "GET",  
+		        url: "/Request.php?model=share", //orderModifyStatus 
+		        data:{source:"message"},
+		        dataType:"json",  
+		        async:false,  
+		        cache:false,  
+		        success: function(data){  
+		        },  
+		        error: function(json){  
+		            //alert("数据获取异常，请刷新后重试...");  
+		        }  
+		 	}); 
         },
         cancel: function () { 
             // 用户取消分享后执行的回调函数
