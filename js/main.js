@@ -149,10 +149,10 @@ $.ajax({
 
 function wechatShare(timestamp_val,signature_val){
   
-  var SHARE_TITLE = 'lancaster摇一摇';
+  var SHARE_TITLE = '摇出千元大礼，摇出美白好运，快来帮我成为那个幸运儿吧';
   var SHARE_LINK = 'http://lancasterld.samesamechina.com';
   var SHARE_IMG = 'http://lancasterld.samesamechina.com/images/logo.png';
-  var SHARE_DESC = 'lancaster摇一摇新产品';
+  var SHARE_DESC = '摇出千元大礼，摇出美白好运，快来帮我成为那个幸运儿吧';
   wx.config({
       debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
       appId: 'wx77e36122ac152d47', // 必填，公众号的唯一标识
