@@ -105,6 +105,18 @@ if(isset($_POST['model'])){
 			print json_encode(array("code"=>1,"msg"=>"提交成功"));
 			exit;
 			break;
+		case 'getopenid':
+			$openid=isset($_POST['openid'])?$_POST['openid']:"";
+			if($openid){
+				$sql="select id from same_weixin_user where openid=".$db->quote($openid);
+				$rs=$db->getOne($sql);
+				if(!$rs){
+					$sqlin="insert into same_weixin_user set openid=".$db->quote($openid);
+					$db->execute($sqlin);
+				}
+			}
+			exit;
+			break;
 		case 'test':
 			$_SESSION["openid"]=123123123;
 			var_dump($_SESSION);
