@@ -35,7 +35,7 @@
 
 
         $(document).on("pageinit","#index",function(){  
-  			init()
+  			init();
 		});   
     })
 })(jQuery)
