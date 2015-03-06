@@ -215,7 +215,7 @@ function wechatShare(timestamp_val,signature_val){
 		        success: function(data){ 
 
                     ga('send','event','auction', 'timeline' );
-                    window.location="home.html#index";
+                    window.location="/home.html#index";
 
 
 		        },  
@@ -246,7 +246,7 @@ function wechatShare(timestamp_val,signature_val){
 		        cache:false,  
 		        success: function(data){  
                     ga('send','event','auction', 'message' );
-                    window.location="home.html#index";
+                    window.location="/home.html#index";
 		        },  
 		        error: function(json){  
 		            //alert("数据获取异常，请刷新后重试...");  
