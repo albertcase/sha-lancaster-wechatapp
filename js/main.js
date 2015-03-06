@@ -1,3 +1,4 @@
+islogin();
 //屏幕方向标识，0横屏，其他值竖屏
 var orientation=0;
 //转屏事件，内部功能可以自定义
@@ -316,9 +317,9 @@ function wechatShare(timestamp_val,signature_val){
 		        cache:false,  
 		        success: function(data){  
                     ga('send','event','auction', 'message' );
-
-
                     window.location="/";
+
+                    
 		        },  
 		        error: function(json){  
 		            //alert("数据获取异常，请刷新后重试...");  
