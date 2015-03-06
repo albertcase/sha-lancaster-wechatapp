@@ -271,9 +271,11 @@ div[data-role="content"] {
 
 .formTips{
 	position: absolute;
-	left: 48%;
-	top: 40%;
-	margin: 3em 0 0 -8%;
+	width:100%;
+	text-align: center;
+	left: 0%;
+	top: 38%;
+	margin: 3em 0 0 0;
     font-size: 1.8em;
 	color:#ff677c;
 	display:none;
