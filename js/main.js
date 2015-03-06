@@ -11,7 +11,7 @@ function lotterydraw(){
             }else if(data.code==2){
                 $(".regret_tips").show();
             }else{
-                alert("没有抽奖机会了，请分享后获取更多机会")
+                $(".jihui_tips").show();
             }
 
         }
