@@ -189,6 +189,7 @@ function submitform(){
                 $(".formTips").hide();
 
                 //返回首页
+                window.history.length = 0;
                 window.history.pushState( {} , 'lancaster', '/' );
                 
            }
