@@ -128,10 +128,11 @@ div[data-role="content"] {
 }
 .shake {
 	width: 16%; 
-	position: relative; 
+	position: absolute; 
 	z-index: 2;
-	margin: 3em auto 0 auto;
-	bottom: 2%;
+	bottom: 9%;
+	left: 50%;
+	margin: 3em 0 0 -8%;
 
 
 
