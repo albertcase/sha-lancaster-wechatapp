@@ -33,6 +33,25 @@ function screenOrientationListener(){
 //启动横竖屏事件监听
 screenOrientationListener();
 
+function islogin(){
+    $.ajax({
+        url:"/Request.php?model=islogin",
+        type:"post",
+        dataType:"json",
+        success:function(data){
+            if(data.code==0){
+                window.location="/"
+            }else if(data.msg.lotterystatus!=0){
+                //已经中过奖
+                $(".lottery_tips").show();
+            }
+            
+
+        }
+
+
+    })
+}
 function lotterydraw(){
     $.ajax({
         url:"/Request.php?model=lotterydraw",

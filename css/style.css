@@ -397,6 +397,16 @@ div[data-role="content"] {
     left: 0;
 }
 
+.lottery_tips .more_btn {
+	width:50%; 
+    display:inline-block;
+	position: absolute; 
+	z-index: 2;
+	left: 24.5%;
+	top: 60%;
+
+}
+
 
 
 
