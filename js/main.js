@@ -212,8 +212,12 @@ function wechatShare(timestamp_val,signature_val){
 		        dataType:"json",  
 		        async:false,  
 		        cache:false,  
-		        success: function(data){  
+		        success: function(data){ 
+
                     ga('send','event','auction', 'timeline' );
+                    window.location="#index";
+
+
 		        },  
 		        error: function(json){  
 		            //alert("数据获取异常，请刷新后重试...");  
@@ -242,6 +246,7 @@ function wechatShare(timestamp_val,signature_val){
 		        cache:false,  
 		        success: function(data){  
                     ga('send','event','auction', 'message' );
+                    window.location="#index";
 		        },  
 		        error: function(json){  
 		            //alert("数据获取异常，请刷新后重试...");  
