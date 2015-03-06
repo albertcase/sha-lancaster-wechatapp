@@ -108,7 +108,7 @@ div[data-role="content"] {
 .logo {
 	width: 56%; 
 	display:inline-block;
-	margin: 8em 0;
+	margin: 6em 0;
 	position: relative; 
 	z-index: 2;
 }
@@ -135,26 +135,25 @@ div[data-role="content"] {
 	margin: 3em 0 0 -8%;
 
 
-
--webkit-animation-name: yaoyao; 
--ms-animation-name: yaoyao; 
-animation-name: yaoyao; 
--webkit-animation-duration: 300ms; 
--ms-animation-duration: 300ms; 
-animation-duration: 300ms; 
--webkit-animation-iteration-count: 6; 
--ms-animation-iteration-count: 6; 
-animation-iteration-count: 6; 
--webkit-animation-timing-function: ease-in-out; 
--ms-animation-timing-function: ease-in-out; 
-animation-timing-function: ease-in-out; 
--webkit-animation-delay: 0s; 
--ms-animation-delay: 0s; 
-animation-delay: 0s; 
--webkit-animation-play-state: running; 
--ms-animation-play-state: running; 
--moz-animation-play-state: running; 
-animation-play-state: running; 
+	-webkit-animation-name: yaoyao; 
+	-ms-animation-name: yaoyao; 
+	animation-name: yaoyao; 
+	-webkit-animation-duration: 300ms; 
+	-ms-animation-duration: 300ms; 
+	animation-duration: 300ms; 
+	-webkit-animation-iteration-count: 6; 
+	-ms-animation-iteration-count: 6; 
+	animation-iteration-count: 6; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-ms-animation-timing-function: ease-in-out; 
+	animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 0s; 
+	-ms-animation-delay: 0s; 
+	animation-delay: 0s; 
+	-webkit-animation-play-state: running; 
+	-ms-animation-play-state: running; 
+	-moz-animation-play-state: running; 
+	animation-play-state: running; 
 
 
 
@@ -278,6 +277,8 @@ animation-play-state: running;
 	margin-left: 20%;
 
 }
+
+
 .more_btn {
 	width:50%; 
     display:inline-block;
@@ -293,6 +294,85 @@ animation-play-state: running;
     width: 50%;
    
 }
+
+
+
+@media only screen and (max-width: 320px) and (max-height:416px) {
+	
+    .logo {
+	width: 45%; 
+	display:inline-block;
+	margin: 5em 0;
+	position: relative; 
+	z-index: 2;
+    }
+	.present {
+		width: 30%; 
+		margin: -1.2em auto;
+		position: relative; 
+		z-index: 2;
+	}
+
+	.shake {
+	width: 14%; 
+	position: absolute; 
+	z-index: 2;
+	bottom: 6%;
+	left: 50%;
+	margin: 3em 0 0 -8%;
+
+
+	-webkit-animation-name: yaoyao; 
+	-ms-animation-name: yaoyao; 
+	animation-name: yaoyao; 
+	-webkit-animation-duration: 300ms; 
+	-ms-animation-duration: 300ms; 
+	animation-duration: 300ms; 
+	-webkit-animation-iteration-count: 6; 
+	-ms-animation-iteration-count: 6; 
+	animation-iteration-count: 6; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-ms-animation-timing-function: ease-in-out; 
+	animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 0s; 
+	-ms-animation-delay: 0s; 
+	animation-delay: 0s; 
+	-webkit-animation-play-state: running; 
+	-ms-animation-play-state: running; 
+	-moz-animation-play-state: running; 
+	animation-play-state: running; 
+
+
+
+	}
+	.tips {
+	width: 80%;
+	position: absolute;
+	z-index: 10;
+	top: 10%;
+	left: 10%;
+	margin: 10em auto;
+
+
+	}
+	.confirm_btn{
+		width: 36%; 
+	    display:inline-block;
+		position: absolute; 
+		z-index: 2;
+		left: 37%;
+		top: 32%;
+
+	}
+	.jiantou img {
+	width:48%;
+	}
+
+
+}
+
+
+
 
 
 
