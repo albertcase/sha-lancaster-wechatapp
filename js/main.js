@@ -1,3 +1,10 @@
+$(function(){
+  $("input").focus(function(){
+    $(".formTips").hide();
+  });  
+})
+
+
 islogin();
 //屏幕方向标识，0横屏，其他值竖屏
 var orientation=0;
@@ -350,9 +357,7 @@ function wechatShare(timestamp_val,signature_val){
 
 
 
-$("input").focus(function(){
-    $(".formTips").hide();
-});
+
 
 
 
