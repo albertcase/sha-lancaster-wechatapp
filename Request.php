@@ -2,7 +2,7 @@
 session_start();
 include_once('./config/database.php');
 include_once('./config/Pdb.php');
-include_once('./config/getIpClass.php');
+include_once('./config/rand.php');
 $_POST=$_REQUEST;
 $db=Pdb::getDb();
 if(isset($_POST['model'])){
@@ -55,7 +55,7 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			//中奖 设置中奖上限
-			$totalnum=100;
+			$totalnum=getRandTop();
 			$total=$db->getOne("select count(id) from same_weixin_march where lotterystatus<>0");
 			if($total>=$totalnum){
 				//奖品已经发完
