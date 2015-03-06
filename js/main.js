@@ -215,6 +215,7 @@ function wechatShare(timestamp_val,signature_val){
 		        success: function(data){ 
 
                     ga('send','event','auction', 'timeline' );
+                    alert("1");
                     window.location="/home.html#index";
 
 
@@ -246,6 +247,8 @@ function wechatShare(timestamp_val,signature_val){
 		        cache:false,  
 		        success: function(data){  
                     ga('send','event','auction', 'message' );
+                    alert("2");
+
                     window.location="/home.html#index";
 		        },  
 		        error: function(json){  
