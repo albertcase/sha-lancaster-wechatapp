@@ -9,8 +9,10 @@ function lotterydraw(){
             if(data.code==1){
                 window.location="#congratulation";
             }else if(data.code==2){
+                $(".mask").show();
                 $(".regret_tips").show();
             }else{
+                $(".mask").show();
                 $(".jihui_tips").show();
             }
 
