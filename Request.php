@@ -43,7 +43,7 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			//未中过奖 给与概率
-			$lotteryline=1000;
+			$lotteryline=5000;
 			$rand=mt_rand(1,10000);
 			if($rand>$lotteryline){
 				//未中奖
