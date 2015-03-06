@@ -1,5 +1,4 @@
 $(function(){
-  window.history.pushState( {} , 'lancaster', '/' );
   $("input").focus(function(){
     $(".formTips").hide();
   });  
@@ -50,8 +49,14 @@ function islogin(){
         success:function(data){
             if(data.code==0){
                 window.location="/"
-            }else if(data.msg.lotterystatus!=0){
+            }
+            
+            if(data.msg.lotterystatus!=0){
                 //已经中过奖
+                if(data.msg.name==""){
+                    window.location="#congratulation";
+                    return false;
+                }
                 $(".lottery_tips").show();
             }
             

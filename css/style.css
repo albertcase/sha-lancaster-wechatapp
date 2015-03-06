@@ -275,7 +275,7 @@ div[data-role="content"] {
 	text-align: center;
 	left: 0%;
 	top: 38%;
-	margin: 3em 0 0 0;
+	margin: 3em 0 0 2em;
     font-size: 1.8em;
 	color:#ff677c;
 	display:none;
