@@ -51,6 +51,10 @@ function islogin(){
                 window.location="/"
             }else if(data.msg.lotterystatus!=0){
                 //已经中过奖
+                if(data.msg.name==""){
+                    window.location="#congratulation";
+                    return false;
+                }
                 $(".lottery_tips").show();
             }
             
