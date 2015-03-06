@@ -1,3 +1,37 @@
+//屏幕方向标识，0横屏，其他值竖屏
+var orientation=0;
+//转屏事件，内部功能可以自定义
+var henghtml = "<div id='heng'></div>";
+function screenOrientationEvent(){
+    if(orientation == 0){
+      var heng = document.getElementById('heng');
+      heng.parentNode.removeChild(heng);
+    }else {
+      console.log(henghtml)
+      var container = document.getElementById('container');
+      container.innerHTML += henghtml;
+    }
+}
+var innerWidthTmp = window.innerWidth;
+//横竖屏事件监听方法
+function screenOrientationListener(){
+    try{
+        var iw = window.innerWidth;     
+        //屏幕方向改变处理
+        if(iw != innerWidthTmp){
+            if(iw>window.innerHeight)orientation = 90;
+            else orientation = 0;
+            //调用转屏事件
+            screenOrientationEvent();
+            innerWidthTmp = iw;
+        }
+    } catch(e){//alert(e);
+    };
+    //间隔固定事件检查是否转屏，默认500毫秒
+    setTimeout("screenOrientationListener()",500);
+}
+//启动横竖屏事件监听
+screenOrientationListener();
 
 function lotterydraw(){
     $.ajax({
@@ -70,10 +104,10 @@ $(document).on("pageinit","#index",function(){
 
 
 var errtxt = {
-            "name" : "请输入您的姓名！",
-            "mobile" : "请输入您的手机号！",
-            "check" : "请填写正确手机号！",
-            "address" : "请输入您的地址！",
+            "name" : "请输入您的姓名",
+            "mobile" : "请输入您的手机号",
+            "check" : "请填写正确手机号",
+            "address" : "请输入您的地址",
             
 
         }
@@ -116,9 +150,15 @@ function submitform(){
         dataType:"json",
         success: function(data){
            if(data.code==1){
+                $(".mask").show();
            		$(".success_tips").show();
+                window.history.pushState( {} , 'lancaster', '/' );
                 
-           }else{
+           }
+           else if(data.code==0){
+                window.location="/";
+           }
+           else{
                 alert(data.msg);
            }
            //window.location.href="question.html"

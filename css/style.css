@@ -268,6 +268,16 @@ div[data-role="content"] {
 }
 
 /* success */
+
+.formTips{
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	margin: 3em 0 0 -8%;
+    font-size: .8em;
+	color:#ff677c;
+
+}
 .success_con {
 	width: 60%;
 	position: absolute;
