@@ -18,14 +18,14 @@
 
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
-		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
 		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
 	</head>
 
-	<body>
+	<body id="container">
 
 		<div data-role="page" id="attention">
 		
@@ -164,7 +164,7 @@
 		    	</div>
 		    	<div class="con_text">
 		    		<h1>恭喜您</h1>
-		    		<p>获得兰嘉丝汀<span style="color:#ff677c;">365美肌修护淡斑亮白精华露小样</span>一份<br/>请填写个人信息，我们会把奖品寄给您</p>
+		    		<p>获得兰嘉丝汀<span id="lotname" style="color:#ff677c;">365美肌修护淡斑亮白精华露小样</span>一份<br/>请填写个人信息，我们会把奖品寄给您</p>
 		    	</div>
 
    				<div class="form">
@@ -208,7 +208,7 @@
 			        </form>
 
 			        
-                    <p class="formTips">fff</p>
+                    <p class="formTips">请填写您的有效收件信息</p>
 
 			        <a class="confirm_btn" onclick="submitform()">
 			        	<img src="images/confirm.png" />

@@ -41,8 +41,10 @@ function lotterydraw(){
         success:function(data){
 
             if(data.code==1){
+                $("#lotname").html(data.msg);
                 window.location="#congratulation";
-            }else if(data.code==2){
+            }
+            else if(data.code==2){
                 $(".mask").show();
                 $(".regret_tips").show();
             }else{
@@ -119,22 +121,26 @@ function submitform(){
     if(name==""){
         $("#name").addClass("errorTips");
         $("#name").val("").attr("placeholder",errtxt.name);
+        $(".formTips").show();
         return false;
 
     }
     if(address==""){
         $("#address").addClass("errorTips");
         $("#address").val("").attr("placeholder",errtxt.address);
+        $(".formTips").show();
         return false;
     }
     if(mobile==""){
         $("#mobile").addClass("errorTips");
         $("#mobile").val("").attr("placeholder",errtxt.mobile);
+        $(".formTips").show();
         return false;
     }
     if(!mobile.match(/13[0-9]{9}|14[0-9]{9}|15[0-9]{9}|18[0-9]{9}/)){
         $("#mobile").addClass("errorTips");
         $("#mobile").val("").attr("placeholder",errtxt.check);
+        $(".formTips").show();
         return false;
     }
     
@@ -152,6 +158,8 @@ function submitform(){
            if(data.code==1){
                 $(".mask").show();
            		$(".success_tips").show();
+
+                //返回首页
                 window.history.pushState( {} , 'lancaster', '/' );
                 
            }
