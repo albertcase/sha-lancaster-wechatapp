@@ -14,6 +14,9 @@ if(isset($_POST['model'])){
 			}
 			$sql="select * from same_weixin_march where openid=".$db->quote($_SESSION["openid"]);
 			$rs=$db->getRow($sql,true);
+			if($rs["lotterystatus"]){
+				$rs["lotname"]=$db->getOne("select name from same_weixin_march_lottery where id=".$rs["lotterystatus"]);
+			}
 			print json_encode(array("code"=>1,"msg"=>$rs));
 			exit;
 			break;
