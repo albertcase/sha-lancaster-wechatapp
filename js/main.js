@@ -134,6 +134,7 @@ var errtxt = {
 
         }
 function submitform(){
+
     var name = $("#name").val();
     var mobile = $("#mobile").val();
     var address = $("#address").val();
@@ -141,26 +142,26 @@ function submitform(){
     if(name==""){
         $("#name").addClass("errorTips");
         $("#name").val("").attr("placeholder",errtxt.name);
-        $(".formTips").show();
+        $(".formTips").show().html("请填写您的姓名信息");
         return false;
 
     }
     if(address==""){
         $("#address").addClass("errorTips");
         $("#address").val("").attr("placeholder",errtxt.address);
-        $(".formTips").show();
+        $(".formTips").show().html("请填写您的地址信息");
         return false;
     }
     if(mobile==""){
         $("#mobile").addClass("errorTips");
         $("#mobile").val("").attr("placeholder",errtxt.mobile);
-        $(".formTips").show();
+        $(".formTips").show().html("请填写您的手机信息");
         return false;
     }
     if(!mobile.match(/13[0-9]{9}|14[0-9]{9}|15[0-9]{9}|18[0-9]{9}/)){
         $("#mobile").addClass("errorTips");
         $("#mobile").val("").attr("placeholder",errtxt.check);
-        $(".formTips").show();
+        $(".formTips").show().html("请填写您的手机信息");
         return false;
     }
     
@@ -319,7 +320,7 @@ function wechatShare(timestamp_val,signature_val){
                     ga('send','event','auction', 'message' );
                     window.location="/";
 
-                    
+
 		        },  
 		        error: function(json){  
 		            //alert("数据获取异常，请刷新后重试...");  
@@ -340,8 +341,17 @@ function wechatShare(timestamp_val,signature_val){
 
   });
 
+
+
+
 }
 
+
+
+
+$("input").focus(function(){
+    $(".formTips").hide();
+});
 
 
 
