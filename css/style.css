@@ -132,7 +132,21 @@ div[data-role="content"] {
 	z-index: 2;
 	margin: 3em auto 0 auto;
 	bottom: 2%;
+	animation:yaoyao 5s;
+	-moz-animation:yaoyao 5s; /* Firefox */
+	-webkit-animation:yaoyao 5s; /* Safari and Chrome */
+	-o-animation:yaoyao 5s; /* Opera */
 
+}
+
+
+
+
+
+@keyframes yaoyao{
+	0%   {transform: rotate(-30deg);}
+	50%  {transform: rotate(0deg);}
+	100%  {transform: rotate(30deg);}
 }
 /* congratulation */
 
@@ -248,3 +262,6 @@ div[data-role="content"] {
     width: 50%;
    
 }
+
+
+
