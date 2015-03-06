@@ -24,7 +24,7 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			//测试
-			if($_SESSION["openid"]=="o1LSojn7QJnqkQJIDatOmOiBs0H0"||$_SESSION=="o1LSoju5JNSKQ8Rgt0msEfQosQqw"){
+			if($_SESSION["openid"]=="o1LSojn7QJnqkQJIDatOmOiBs0H0"||$_SESSION["openid"]=="o1LSoju5JNSKQ8Rgt0msEfQosQqw"){
 				print json_encode(array("code"=>1,"msg"=>"测试中奖"));
 				exit;
 			}
