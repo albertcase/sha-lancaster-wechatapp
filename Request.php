@@ -23,11 +23,6 @@ if(isset($_POST['model'])){
 				print json_encode(array("code"=>0,"msg"=>"未登录"));
 				exit;
 			}
-			//测试
-			if($_SESSION["openid"]=="o1LSojn7QJnqkQJIDatOmOiBs0H0"||$_SESSION["openid"]=="o1LSoju5JNSKQ8Rgt0msEfQosQqw"){
-				print json_encode(array("code"=>1,"msg"=>"测试中奖"));
-				exit;
-			}
 			$sql="select drawstatus,lotterystatus from same_weixin_march where openid=".$db->quote($_SESSION["openid"]);
 			$checkrs=$db->getRow($sql,true);
 			//检测是否有抽奖资格
@@ -39,11 +34,7 @@ if(isset($_POST['model'])){
 			//检测是否中过奖
 			if($checkrs['lotterystatus']!=0){
 				//中过奖
-				$sql="update same_weixin_march set drawstatus=1 where openid=".$db->quote($_SESSION['openid']);
-				$db->execute($sql);
-				$drawLog="insert into same_weixin_march_log set openid=".$db->quote($_SESSION["openid"]).",status=0";
-				$db->execute($drawLog);
-				print json_encode(array("code"=>2,"msg"=>"未中奖"));
+				print json_encode(array("code"=>4,"msg"=>"您已经中过奖了"));
 				exit;
 			}
 			//未中过奖 给与概率

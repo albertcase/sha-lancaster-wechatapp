@@ -1,6 +1,6 @@
 <?php
 function getRandTop(){
-	$timeAry=array("all"=>1000,
+	$timeAry=array("all"=>5000,
 					"30600"=>100,
 					"30601"=>100,
 					"30602"=>100,
