@@ -149,7 +149,7 @@ $.ajax({
 
 function wechatShare(timestamp_val,signature_val){
   
-  var SHARE_TITLE = '摇出千元大礼，摇出美白好运，快来帮我成为那个幸运儿吧';
+  var SHARE_TITLE = '兰嘉丝汀美白大作战';
   var SHARE_LINK = 'http://lancasterld.samesamechina.com';
   var SHARE_IMG = 'http://lancasterld.samesamechina.com/images/share.jpg';
   var SHARE_DESC = '摇出千元大礼，摇出美白好运，快来帮我成为那个幸运儿吧';
@@ -231,7 +231,7 @@ function wechatShare(timestamp_val,signature_val){
         title: SHARE_TITLE, // 分享标题
         link: SHARE_LINK, // 分享链接
         imgUrl: SHARE_IMG, // 分享图标
-      desc: SHARE_DESC,
+        desc: SHARE_DESC,
         success: function () { 
             $.ajax({  
 		        type: "GET",  
