@@ -47,7 +47,7 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			//未中过奖 给与概率
-			$lotteryline=5000;
+			$lotteryline=getRandTop();
 			$rand=mt_rand(1,10000);
 			if($rand>$lotteryline){
 				//未中奖
@@ -59,8 +59,18 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			//中奖 设置中奖上限
-			$totalnum=getRandTop();
-			$total=$db->getOne("select count(id) from same_weixin_march where lotterystatus<>0");
+			$lotteryList=$db->getRow("SELECT * FROM `same_weixin_march_lottery` WHERE num<>0 order by rand() limit 1",true);
+			if(!$lotteryList){
+				//奖品发放完毕
+				$sql="update same_weixin_march set drawstatus=1 where openid=".$db->quote($_SESSION['openid']);
+				$db->execute($sql);
+				$drawLog="insert into same_weixin_march_log set openid=".$db->quote($_SESSION["openid"]).",status=0";
+				$db->execute($drawLog);
+				print json_encode(array("code"=>2,"msg"=>"未中奖"));
+				exit;
+			}
+			/*
+			$total=$db->getOne("select count(id) from same_weixin_march where lotterystatus=".$lotteryList["id"]);
 			if($total>=$totalnum){
 				//奖品已经发完
 				$sql="update same_weixin_march set drawstatus=1 where openid=".$db->quote($_SESSION['openid']);
@@ -70,11 +80,14 @@ if(isset($_POST['model'])){
 				print json_encode(array("code"=>2,"msg"=>"未中奖"));
 				exit;
 			}
-			$sql="update same_weixin_march set drawstatus=1,lotterystatus=1 where openid=".$db->quote($_SESSION['openid']);
+			*/
+			$sql="update same_weixin_march set drawstatus=1,lotterystatus=".$db->quote($lotteryList["id"])." where openid=".$db->quote($_SESSION['openid']);
 			$db->execute($sql);
-			$drawLog="insert into same_weixin_march_log set openid=".$db->quote($_SESSION["openid"]).",status=1";
+			$drawLog="insert into same_weixin_march_log set openid=".$db->quote($_SESSION["openid"]).",status=".$db->quote($lotteryList['name']);
 			$db->execute($drawLog);
-			print json_encode(array("code"=>1,"msg"=>"恭喜中奖"));
+			$countLog="update same_weixin_march_lottery set num=num-1 where id=".$lotteryList["id"];
+			$db->execute($drawLog);
+			print json_encode(array("code"=>1,"msg"=>$lotteryList['name']));
 			exit;
 			break;
 	
