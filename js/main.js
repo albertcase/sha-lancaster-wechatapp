@@ -1,4 +1,5 @@
 $(function(){
+  window.history.pushState( {} , 'lancaster', '/' );
   $("input").focus(function(){
     $(".formTips").hide();
   });  
