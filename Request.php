@@ -77,7 +77,7 @@ if(isset($_POST['model'])){
 			$drawLog="insert into same_weixin_march_log set openid=".$db->quote($_SESSION["openid"]).",status=".$db->quote($lotteryList['name']);
 			$db->execute($drawLog);
 			$countLog="update same_weixin_march_lottery set num=num-1 where id=".$lotteryList["id"];
-			$db->execute($drawLog);
+			$db->execute($countLog);
 			print json_encode(array("code"=>1,"msg"=>$lotteryList['name']));
 			exit;
 			break;
