@@ -179,6 +179,7 @@ function submitform(){
            if(data.code==1){
                 $(".mask").show();
            		$(".success_tips").show();
+                $(".formTips").hide();
 
                 //返回首页
                 window.history.pushState( {} , 'lancaster', '/' );
