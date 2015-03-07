@@ -1,9 +1,17 @@
 $(function(){
   $("input").focus(function(){
     $(".formTips").hide();
-  });  
+  });
+  resizeFun();
 })
 
+window.onresize = resizeFun;
+
+function resizeFun(){
+    var sw = parseInt(document.body.clientWidth);
+    var sh = parseInt(document.body.clientHeight); 
+    $('#container').css({width:sw,height:sh})
+}
 
 islogin();
 //屏幕方向标识，0横屏，其他值竖屏
@@ -141,8 +149,8 @@ $(document).on("pageinit","#index",function(){
 
 var errtxt = {
             "name" : "请输入您的姓名",
-            "mobile" : "请输入您的手机号",
-            "check" : "请填写正确手机号",
+            "mobile" : "请输入您的手机",
+            "check" : "请填写正确手机",
             "address" : "请输入您的地址",
             
 
