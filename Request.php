@@ -26,6 +26,14 @@ if(isset($_POST['model'])){
 				print json_encode(array("code"=>0,"msg"=>"未登录"));
 				exit;
 			}
+			if(date("Ymd")<20150308){
+				print json_encode(array("code"=>5,"msg"=>"活动尚未开始"));
+				exit;
+			}
+			if(date("Ymd")>20150309){
+				print json_encode(array("code"=>5,"msg"=>"活动已经结束"));
+				exit;
+			}
 			$sql="select drawstatus,lotterystatus from same_weixin_march where openid=".$db->quote($_SESSION["openid"]);
 			$checkrs=$db->getRow($sql,true);
 			//检测是否有抽奖资格
@@ -140,6 +148,7 @@ if(isset($_POST['model'])){
 			exit;
 			break;
 		case 'test':
+		    echo getRandTop();
 			//$_SESSION["openid"]=123123123;
 			var_dump($_SESSION);
 			break;
