@@ -89,9 +89,11 @@ function lotterydraw(){
             else if(data.code==2){
                 $(".mask").show();
                 $(".regret_tips").show();
-            }else{
+            }else if(data.code==3){
                 $(".mask").show();
                 $(".jihui_tips").show();
+            }else{
+                alert(data.msg)
             }
 
         }
