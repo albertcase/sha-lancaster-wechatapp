@@ -27,11 +27,11 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			if(date("Ymd")<20150308){
-				print json_encode(array("code"=>5,"msg"=>"活动尚未开始"));
+				print json_encode(array("code"=>5,"msg"=>"活动将于3月8日0点准时开始，敬请期待"));
 				exit;
 			}
 			if(date("Ymd")>20150309){
-				print json_encode(array("code"=>5,"msg"=>"活动已经结束"));
+				print json_encode(array("code"=>5,"msg"=>"活动将于3月9日24点结束，谢谢参与"));
 				exit;
 			}
 			$sql="select drawstatus,lotterystatus from same_weixin_march where openid=".$db->quote($_SESSION["openid"]);
