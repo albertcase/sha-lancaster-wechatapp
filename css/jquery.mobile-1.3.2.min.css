@@ -1010,9 +1010,9 @@ a.ui-link-inherit {
 }
 
 .ui-icon-loading {
-	background: url(../images/loading.gif);
+/*	background: url(../images/loading.gif);
 	background-size: 46px 46px
-}
+*/}
 
 .ui-btn-corner-all {
 	-webkit-border-radius: 1em;
