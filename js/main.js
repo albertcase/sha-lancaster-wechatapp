@@ -56,7 +56,7 @@ function islogin(){
         dataType:"json",
         success:function(data){
             if(data.code==0){
-                window.location="/"
+                //window.location="/"
             }
 
             if(data.msg.lotterystatus!=0){
@@ -211,7 +211,7 @@ function submitform(){
                 
            }
            else if(data.code==0){
-                window.location="/";
+                //window.location="/";
            }
            else{
                 alert(data.msg);
