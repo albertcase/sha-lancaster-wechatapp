@@ -56,7 +56,7 @@ function islogin(){
         dataType:"json",
         success:function(data){
             if(data.code==0){
-                window.location="/"
+                //window.location="/"
             }
 
             if(data.msg.lotterystatus!=0){
@@ -211,7 +211,7 @@ function submitform(){
                 
            }
            else if(data.code==0){
-                window.location="/";
+                //window.location="/";
            }
            else{
                 alert(data.msg);
@@ -311,7 +311,7 @@ function wechatShare(timestamp_val,signature_val){
 		        cache:false,  
 		        success: function(data){ 
 
-                    //ga('send','event','auction', 'timeline' );
+                    ga('send','event','auction', 'timeline' );
                     
                     window.location="/";
 
@@ -343,7 +343,7 @@ function wechatShare(timestamp_val,signature_val){
 		        async:false,  
 		        cache:false,  
 		        success: function(data){  
-                    //ga('send','event','auction', 'message' );
+                    ga('send','event','auction', 'message' );
                     window.location="/";
 
 
