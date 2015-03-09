@@ -311,7 +311,7 @@ function wechatShare(timestamp_val,signature_val){
 		        cache:false,  
 		        success: function(data){ 
 
-                    ga('send','event','auction', 'timeline' );
+                    //ga('send','event','auction', 'timeline' );
                     
                     window.location="/";
 
@@ -343,7 +343,7 @@ function wechatShare(timestamp_val,signature_val){
 		        async:false,  
 		        cache:false,  
 		        success: function(data){  
-                    ga('send','event','auction', 'message' );
+                    //ga('send','event','auction', 'message' );
                     window.location="/";
 
 
