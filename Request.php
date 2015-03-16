@@ -148,9 +148,8 @@ if(isset($_POST['model'])){
 			exit;
 			break;
 		case 'test':
-		    echo getRandTop();
-			//$_SESSION["openid"]=123123123;
-			var_dump($_SESSION);
+		    $openidList=$db->getAll("select * from same_weixin_march where name<>'' and lotterystatus<>0",true);
+		    var_dump($openidList);exit;
 			break;
 		default:
 			# code...
