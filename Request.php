@@ -148,8 +148,16 @@ if(isset($_POST['model'])){
 			exit;
 			break;
 		case 'test':
-		    $openidList=$db->getAll("select * from same_weixin_march where name<>'' and lotterystatus<>0",true);
-		    var_dump($openidList);exit;
+			set_time_limit(0);
+		    $openidList=$db->getAll("select * from temp_weixin2 where nickname=''",true);
+		    $access_token=file_get_contents("./access_token/access_token.txt");
+		    for($i=0;$i<20;$i++){
+		    	$info=file_get_contents("https://api.weixin.qq.com/cgi-bin/user/info?access_token=$access_token&openid=".$openidList[$i]["openid"]."&lang=zh_CN");
+		    	$info=json_decode($info,true);
+		    	$db->execute("update temp_weixin2 set nickname='".$info["nickname"]."',head='".$info["headimgurl"]."' where id=".$openidList[$i]["id"]);
+		    	
+		    }
+		    echo $i;die;
 			break;
 		default:
 			# code...
